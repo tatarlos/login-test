@@ -1,21 +1,7 @@
-<?php 
+<?php
+//include __DIR__ . '/../src/functions.php';
+include 'functions.php';
 $action = $_POST['action'];
+date_default_timezone_set('NZ');
 $action();
-
-
-function verify(){
-	$name = $_POST['name'];
-	$password = $_POST['password'];
-	$test = "";
-	$testpass = 'test';
-	$testuser = 'test';
-
-
-	if($testpass === $password && $testuser === $name){
-		$test = ("success");	
-	}else{
-		$test = ("wrong info");	
-	}
-	echo($test);
-}
 ?>

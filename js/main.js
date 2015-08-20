@@ -2,6 +2,7 @@ $(document).ready(function(){
 	
 	var $loginBtn = $('.login-btn'),
 	$form = $('form'),
+	$logoutBtn = $('#logout'),
 	name = $form.find('#name'),
 	password = $form.find('#password');
 
@@ -14,8 +15,18 @@ $(document).ready(function(){
 		}
 
 		$.post("ajax.php",formData, function(data){
-			console.log(data);
+			if(data==="success"){
+			window.location.href ="index.php";}		
 		});
 		
-	})
+	});
+	$logoutBtn.on('click',function(e){
+		logic = {
+			'action':'logout',
+		}
+		$.post("ajax.php",logic, function(data){
+			console.log(data);
+			window.location.href ="index.php";	
+		});	
+	});
 });
