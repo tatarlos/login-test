@@ -1,0 +1,124 @@
+@selection-page-width: 280px;
+@option-container-width: @selection-page-width - 20px;
+html,body{
+	height:100%;
+}
+.selection-page-container{
+	background-image:url('../img/selection-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 87vh;
+	padding-bottom: @footer-height+2;
+}
+.option-selection-container{
+	width:@selection-page-width;
+	margin: 0 auto;
+	color: @accented-color;
+	.helper-text{
+		padding-top: 5vh;
+	}
+
+}
+.options-container{
+	.option{	
+		border: 2px solid @accented-color;
+		margin: @between-div-margin 0;
+		.info-container{
+			position: relative;
+			margin: 10px auto;
+			width: @option-container-width;
+			.more{
+				float:right;
+				margin:@between-div-margin/2;
+				font-weight: bold;
+			}
+			.pick-title{
+				margin: 5px;
+			}
+			.selected-options{
+				margin-top:@between-div-margin;
+				border-top: 1px solid @accented-color;
+				.selected-container{
+				margin-top:5px;
+				font-size: .9em;
+				padding:@between-div-margin/2;
+					.selected-text{
+						margin-left: 10px;
+						display:inline-block;
+					}
+					.delete{
+						display:inline-block;
+					}
+				}
+			}
+		}
+	}
+	.sub-options-container{
+		display:none;
+		.option-sub{
+			opacity: .4;
+			margin:2%;
+			width:46%;
+			float:left;
+			height: 50px;
+			background-color: @red;
+			line-height: 50px;
+			text-align: center;
+			color:white;
+		}
+		.option-selected{
+			opacity: 1;
+		}
+
+	}
+
+
+}
+
+.summit-options-container{
+
+	.sumbit{
+		float:left;
+		line-height:50px;
+		text-align: center;
+	}
+	.find-meal-btn{
+		width:60%;
+		margin-right:4%;
+		height:50px;
+		background-color: @red;
+	}
+	.find-meal-reset{
+		width:35%;
+		height:50px;
+		background-color: @grey;
+		color:white;
+		.seethrough-text{
+			color:black;
+			font:1.2em;
+		}
+	}
+
+
+}
+.arrow{
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	padding: 2px 1px;
+	right: 5px;
+	width:18px;
+	float:right;
+	transform: scale(2,3);
+	.mixin-transform(90deg, @scaley:.7);
+
+}
+.box_animate {
+	top:-5px;
+  .mixin-transform(180deg , .5s,@scaley:.7);
+}
+.selected{
+	color:@red;
+	background-color: @grey;
+	display:show;
+}

@@ -1,0 +1,34 @@
+@import 'normalize.css';
+.font {
+  color: #fe4e50;
+  font-size: 20px;
+  font-weight: bold;
+}
+.font-subtext {
+  color: black;
+  font-size: 18px;
+}
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+* {
+  font-size: 1.2em;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

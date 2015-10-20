@@ -1,0 +1,103 @@
+.results-container{
+	position:fixed;
+	//overflow:auto;
+	width:400vw;
+	height:100vh;
+}
+
+.result{
+	float:left;
+	background-image:url('../img/selection-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width:100vw;
+	padding-bottom:@footer-height+1;
+	.restaurant-img-container{
+		height:@result-img-height;
+		width:100%;
+		img{
+			width:100%;
+			height:100%;
+		}
+	}
+	.restaurant-title{
+		text-align: center;
+		font-size: 1.1em;
+		background-color: @red;
+		color:white;
+		height:@button-height;
+		line-height: @button-height;
+	}
+	.google-maps{
+		background-image:url('../img/maps.png');
+		//background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height:@result-img-height;
+	}
+	.result-content-wrapper{
+
+		width:@result-container-width;
+		margin: 40px auto (@between-div-margin*2);
+
+		.tonights-special{
+			border: 2px dotted white;
+			box-sizing: border-box;
+			padding:5px;
+			text-align: center;
+			color:white;
+			margin-bottom: 40px;
+			.special-title{
+				font-size: 1.1em;
+			}
+			.special-info{
+				margin: @between-div-margin 0;
+			}
+			.special-price{
+				font-size: 1.5em;
+			}
+		}
+		.restaurant-description-text{
+			color:white;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		.sub-details1{
+			box-sizing: border-box;
+			margin-top:@between-div-margin;
+			background-color: @grey;
+			padding:4%;
+			.result-subheader{
+				color:@red;
+				margin-bottom: @between-div-margin;
+			}
+			.fa{
+				color: @red;
+			}
+		}
+		.first{
+			margin-left: 6%;
+			margin-right: 25%;
+		}
+
+		.rating-thumb-container{
+			width:32px;
+			float:left;
+			&:first-child{
+				color:black;
+			}
+			&:last-child{
+				margin-left: 25%;
+			}
+		}
+		.button-tab{
+			margin-top: @between-div-margin;
+			color:white;
+			background-color: @red;
+			height:@button-height;
+			line-height: @button-height;
+			text-align: center;
+		}
+	}
+}
+

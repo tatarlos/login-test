@@ -1,0 +1,68 @@
+@logo-container-width:250px;
+@home-selection-box-width: 130px;
+@home-options-container: @home-selection-box-width*2 + 10px;
+
+.home-container{
+	padding-top:6vh;
+	height: 94vh;
+	width: 100vw;
+	background-image:url('../img/home-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+.logo-container{
+	min-width:@logo-container-width;
+	width: percentage(@logo-container-width/320);
+	height:@logo-container-width/3*2.3;
+	margin: 0 auto;
+	.logo{
+		height:100%;
+		width:100%;
+		background-image:url('../img/logo.png');
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+.bottom-half{
+	position:absolute;
+	bottom:0;
+	height:55vh;
+	width:100vw;
+}
+.slogan-text{
+	font-size: @header-font-size;
+	text-align: center;
+	margin: 5vh 0 2vh;
+	color:white;
+}
+
+.home-options{
+	width:@home-options-container;
+	margin: 0 auto;
+	.home{
+		position: relative;
+		float: left;
+		border: 2px dotted  @accented-color;
+		width: @home-selection-box-width;
+		height: @home-selection-box-width;
+		img{
+			margin-top: -10px;
+			width:100%;
+		}
+		.sub-text{
+			width:100%;
+			color: white;
+			position: absolute;
+			bottom: 10px;
+			text-align: center;
+		}
+	}
+	.suprise-me{
+		border-left:none;
+	}
+}
+
+

@@ -1,35 +1,36 @@
 <?php
-date_default_timezone_set('NZ');
-session_start();
-if(isset($_SESSION['user'])):
-	$user = $_SESSION['user'];
-	$username = $user['name'];
-	$priv = $user['priv'];
+include 'header.php';
 ?>
-<div>welcome <?php echo $username ?></div>
-<button id='logout'>logout</button>
-<?php else: ?>
-<!DOCTYPE html>
-<style>
-	
-
-</style>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
 <body>
-	<form action="">
-		<label for="name">Name</label>
-		<input id="name" name="name" type="text">
-		<label for="password">Password</label>
-		<input  id="password" name="password" type="text">
-		<input class ="login-btn" type="submit" value="Login">	
-	</form>
+	<main class = "home-container clearfix">
+	<div class="logo-container clearfix">
+		<div class="logo"></div>
+	</div>
+
+	<div class="bottom-half">
+		<div class="slogan-text">WHAT'S YOUR DINING CHOICE?</div>
+		<div class="home-options clearfix">
+			<a href="your-pick.php">
+				<div class="home your-pick">
+					<img src="img/your-pick.png" alt=""/>
+					<div class="sub-text">YOUR PICK</div>
+				</div>
+			</a>
+			<a href="single-result.php">
+				<div class="home suprise-me">
+					<img src="img/suprise.png" alt=""/>
+					<div class="sub-text">SUPRISE ME</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	</main>
 </body>
-<?php endif; ?>
- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script src="js/main.js"></script>
-</html>
+<?php include 'footer.php'; ?>
+<script></script>
+<!-- 
+  <h2>live Search</h2>
+  <div class="search-container" style="width:200px">
+    <input id="search" type="text" autocomplete="off"/><br>
+    <div id="search-string"></div>
+  </div> -->
